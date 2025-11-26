@@ -1,7 +1,10 @@
-**FolkCart: Handmade with Heritage 🛍️**
+# FolkCart 🛍️  
+**Handmade with heritage — connecting local artisans to a global market.**
+
+## 🌟 What is FolkCart?  
 FolkCart is a full-stack e-commerce web application built on the MERN stack (MongoDB, Express, React, Node.js), designed to empower artisans — starting with the Jhargram region of West Bengal — by giving them a platform to showcase and sell their handmade products to a wider audience. It provides a modern shopping experience with secure backend services, and aims to bridge the gap between traditional craftsmanship and global demand.  
 
-✨ **Features**
+## ✨ Features
 
 **Customer Experience (Frontend)**
 - **Responsive, mobile-first UI** — built with React and Tailwind CSS, ensuring a seamless shopping experience across devices.  
@@ -15,22 +18,80 @@ FolkCart is a full-stack e-commerce web application built on the MERN stack (Mon
 - **Scalable Cloud Integration** — Media uploads/storage handled through cloud services (e.g. Cloudinary), making the app ready for real-world deployment.  
 - **Auto Database Seeding** — ensures the project is instantly functional on fresh setup (ideal for demos or deployments).  
 
-**📦 Project Structure**
+## 📦 Project Structure
 The repository is structured into two main services:
-/folkcart-project/
-├── server/               # Backend Service (Node.js/Express)
-│   ├── controller/       # Business logic (product_controller.js, admin_controller.js)
-│   ├── db/               # Mongoose Schemas (productdb.js, orderdb.js)
-│   ├── middleware/       # JWT Auth Middleware (auth.js)
-│   ├── routes/           # API Endpoints (product_r.js, adminr.js, cart_r.js)
-│   └── index.js          # Server entry point
-└── frontend/             # Customer & Admin Frontend (React/TypeScript)
-    ├── public/           # Static assets (including logo and vendor files)
-    ├── src/              # React application source code
-    │   ├── components/
-    │   ├── context/      # Global state (CartContext.tsx)
-    │   └── pages/        # Route components (Products.tsx, Home.tsx, Login.js)
-    └── package.json
+
+FolkCart/
+├── README.md
+├── server/                     # Backend (Node.js + Express + MongoDB)
+│   ├── controller/             # Controller logic (API handling)
+│   │   ├── admin_controller.js
+│   │   ├── cart_controller.js
+│   │   ├── contact_controller.js
+│   │   ├── order_controller.js
+│   │   ├── product_controller.js
+│   │   └── user_controller.js
+│   │
+│   ├── db/                     # MongoDB/Mongoose schemas
+│   │   ├── admindb.js
+│   │   ├── cartdb.js
+│   │   ├── contactdb.js
+│   │   ├── orderdb.js
+│   │   ├── productdb.js
+│   │   └── userdb.js
+│   │
+│   ├── middleware/             # Authentication & access control
+│   │   ├── authenticate.js
+│   │   └── isadmin.js
+│   │
+│   ├── routes/                 # API Routes
+│   │   ├── admin_r.js
+│   │   ├── cart_r.js
+│   │   ├── contact_r.js
+│   │   ├── order_r.js
+│   │   ├── product_r.js
+│   │   └── user_r.js
+│   │
+│   ├── uploads/                # Uploaded product images
+│   ├── index.js                # Main Express server
+│   ├── .env                    # Environment variables (ignored in Git)
+│   ├── package.json
+│   └── package-lock.json
+│
+└── frontend/                   # Client-side (React + Tailwind)
+    ├── public/                 # Static files
+    │   ├── assets/
+    │   ├── css/
+    │   ├── js/
+    │   └── index.html
+    │
+    ├── src/
+    │   ├── components/         # Reusable UI components
+    │   │   ├── Header.js
+    │   │   ├── Footer.js
+    │   │   └── ProductItem.js
+    │   │
+    │   ├── pages/              # Individual pages
+    │   │   ├── Home.js
+    │   │   ├── Products.js
+    │   │   ├── ProductDetails.js
+    │   │   ├── About.js
+    │   │   ├── Contact.js
+    │   │   ├── Login.js
+    │   │   ├── Cart.js
+    │   │   └── OrderSuccess.js
+    │   │
+    │   ├── context/            # Global state (Cart Context, User Context)
+    │   │   └── CartContext.jsx
+    │   │
+    │   ├── api/                # API request helpers (fetch wrappers)
+    │   ├── App.js              # Main routing & layout
+    │   ├── index.js            # React root
+    │   └── styles/             # Custom styles (if any)
+    │
+    ├── package.json
+    └── package-lock.json
+
 
 ## 🎯 Why FolkCart Matters  
 - **Empowers traditional artisans** — provides an accessible digital storefront for craftsmen who otherwise lack reach.  
