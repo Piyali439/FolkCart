@@ -21,6 +21,7 @@ FolkCart is a full-stack e-commerce web application built on the MERN stack (Mon
 ## 📦 Project Structure
 The repository is structured into two main services:
 
+```bash
 FolkCart/
 ├── README.md
 ├── server/                     # Backend (Node.js + Express + MongoDB)
@@ -91,7 +92,7 @@ FolkCart/
     │
     ├── package.json
     └── package-lock.json
-
+```
 
 ## 🎯 Why FolkCart Matters  
 - **Empowers traditional artisans** — provides an accessible digital storefront for craftsmen who otherwise lack reach.  
